@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+/* GLOBAL STYLES */
+
+:root {
+  --font-title: "Fredoka One", sans-serif;
+  --font-secondary: "Comic Neue", serif;
+  --font-code: "Roboto", monospace;
+  --font-footer: "Varela Round", sans-serif;
+  --bg-color: #00163f;
+  --font-color: #ffffff;
+  --btn-bg-color: #66d6d4;
+  --accent-color: rgb(46, 4, 59);
+  --header-shadow: #000 0px 0px 5px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(images/moon\ background.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+}
+
+.outerbox {
+  position: fixed;
+  width: 100%;
+  height: 3.8rem;
+  background-color: #172949b6;
+}
+/* header */
+.header {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0.5rem 2rem;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+#scroll {
+  margin-top: 3.8rem;
+  background: url(images/scroll.png);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  flex-flow: column;
+  height: 5000px;
+}
+
+/*network alert*/
+
+#networkalert {
+  position: fixed;
+  background-color: #cc0923e5;
+  width: 100%;
+  height: 35px;
+  margin: auto;
+  text-align: center;
+  padding: 8px;
+  color: var(--font-color);
+  font-family: var(--font-secondary);
+  font-weight: 600;
+}
+
+/* BUTTONS */
+
+.btn {
+  display: inline-block;
+  padding: 0.4rem 2rem;
+  background: var(--btn-bg-color);
+  color: var(--font-color);
+  font-family: var(--font-secondary);
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+}
+.btn:hover {
+  transform: scale(1.2, 1.2) translate3d(0, 0, 0) perspective(1px);
+  -webkit-transform: scale(1.2, 1.2) translate3d(0, 0, 0) perspective(1px);
+  -moz-transform: scale(1.2, 1.2) translate3d(0, 0, 0) perspective(1px);
+  -o-transform: scale(1.2, 1.2) translate3d(0, 0, 0) perspective(1px);
+  -ms-transform: scale(1.2, 1.2) translate3d(0, 0, 0) perspective(1px);
+}
+.wallet-btn {
+  border-radius: 0.5rem;
+  margin-left: 2rem;
+  border-color: transparent;
+}
+.mint-container {
+  padding-top: 15rem;
+  height: 600px;
+  color: #ffffff;
+  text-align: center;
+}
+#mintcontainer {
+  display: block;
+}
+#NotLive {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  margin-top: 15%;
+  margin-bottom: 30%;
+  display: none;
+}
+#mintnotlive {
+  width: 100%;
+}
+#discordbutton {
+  margin-top: 3%;
+  margin-left: 30%;
+  margin-right: auto;
+}
+.mint-btn {
+  border-radius: 2rem;
+  font-size: 25px;
+  border-color: transparent;
+  margin-left: 1rem;
+  margin-top: 0.7rem;
+  padding: 0.25rem 1.8rem;
+}
+.number-btn {
+  border-radius: 2rem;
+  border-color: transparent;
+  margin-left: 1rem;
+  padding: 0.4rem 0.8rem;
+}
+#MintNumber {
+  font-family: var(--font-secondary);
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 1rem;
+}
+.supply {
+  font-family: var(--font-secondary);
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+#currentSupply {
+  font-family: var(--font-secondary);
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+#title {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  max-height: 100%;
+}
+#titlepicture {
+  margin-top: 17%;
+  margin-left: 20%;
+  margin-right: auto;
+  width: 60%;
+  flex-flow: column;
+}
+
+.box {
+  border-radius: 25px;
+  border: 8px solid #b8ccf8;
+  background-color: var(--btn-bg-color);
+  box-shadow: 3px 3px 5px #000;
+  margin-top: 1rem;
+  margin-right: 35%;
+  margin-left: 5%;
+  min-width: 500px;
+  text-align: center;
+}
+.title1 {
+  font-size: 45px;
+  color: var(--font-color);
+  font-family: var(--font-title);
+  font-weight: 10;
+}
+
+.classic {
+  font-size: 25px;
+  color: var(--font-color);
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  margin-top: 3%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 3%;
+}
+
+#aboutheidi {
+  margin-left: 35%;
+  margin-right: 5%;
+  margin-top: 15%;
+  width: content;
+  height: auto;
+  overflow: auto;
+}
+#heidi {
+  width: 30%;
+  max-width: 300px;
+  border-radius: 15px;
+  float: left;
+}
+#heiditext {
+  margin-left: 35%;
+  width: auto;
+}
+
+.clickup-embed {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15%;
+  height: 700px;
+  width: 100%;
+  background: transparent;
+  border: 5px solid rgb(8, 10, 48);
+}
+/* TEAM */
+.wholediv {
+  margin-top: 0;
+  width: 100%;
+  height: 20%;
+  background-color: #5874b3;
+  text-align: center;
+}
+#knedl {
+  margin-top: 50px;
+  width: 230px;
+  border-radius: 50%;
+  border: #66d6d4 solid 10px;
+}
+.title2 {
+  font-size: 30px;
+  color: var(--font-color);
+  font-family: var(--font-title);
+  font-weight: 10;
+}
+#aboutknedl {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  text-align: center;
+}
+#knedltitle {
+  font-size: 60px;
+}
+#contact {
+  font-family: var(--font-footer);
+  color: #ffffff;
+  font-size: 15px;
+
+  font-weight: 500;
+}
+#contract:hover,
+:visited,
+:link,
+:active {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+}
