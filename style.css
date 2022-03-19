@@ -4,6 +4,10 @@
 
 /* GLOBAL STYLES */
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --font-title: "Fredoka One", sans-serif;
   --font-secondary: "Comic Neue", serif;
