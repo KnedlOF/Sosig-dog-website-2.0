@@ -134,9 +134,15 @@ body {
 #mintnotlive {
   width: 100%;
 }
+#mintnotlivetext {
+  font-size: 30px;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
 #discordbutton {
   margin-top: 3%;
-  margin-left: 30%;
+  margin-left: 35%;
   margin-right: auto;
 }
 .mint-btn {
