@@ -86,7 +86,32 @@ body {
   font-family: var(--font-secondary);
   font-weight: 600;
 }
-
+#music {
+  border-radius: 0 0 10px 10px;
+  border-bottom: 3px solid #b8ccf8;
+  border-right: 3px solid #b8ccf8;
+  border-left: 3px solid #b8ccf8;
+  margin-left: 70%;
+  width: 300px;
+  position: fixed;
+  background-color: #5873b3c4;
+  height: 35px;
+  text-align: center;
+  padding: 8px;
+  color: var(--font-color);
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  font-size: large;
+  animation: fadein 1s;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /* BUTTONS */
 
 .btn {

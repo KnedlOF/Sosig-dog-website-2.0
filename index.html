@@ -126,15 +126,17 @@
             <script>
               var audio = document.getElementById("audio");
               var audioloop = document.getElementById("audioloop");
+
               var x = 1;
               var y = 1;
               function play() {
                 x++;
                 y = x % 2;
-
+                var timer;
+                var div = document.getElementById("music");
                 if (y == 0) {
-                  audio.volume = 0.2;
-                  audioloop.volume = 0.2;
+                  audio.volume = 0.15;
+                  audioloop.volume = 0.15;
                   audio.play();
                   audio.addEventListener("ended", function () {
                     audioloop.play();
@@ -144,6 +146,19 @@
                   audioloop.pause();
                   audio.currentTime = 0;
                   audioloop.currentTime = 0;
+                }
+                function Timer() {
+                  window.clearTimeout(timer);
+                  timer = window.setTimeout(() => {
+                    div.style.display = "none";
+                  }, 7000);
+                }
+                if (y == 0) {
+                  div.style.display = "block";
+                  Timer();
+                } else {
+                  window.clearTimeout(timer);
+                  div.style.display = "none";
                 }
               }
             </script>
@@ -164,6 +179,9 @@
       <div id="networkalert" style="display: none">
         It looks like you are on wrong network, please change it to Polygon
         Mainnet.
+      </div>
+      <div id="music" style="display: none">
+        <p>Vid Kecman - Noom</p>
       </div>
       <div id="title">
         <object data="images/sosig title white.png" id="titlepicture"></object>
