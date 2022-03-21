@@ -36,6 +36,17 @@
   <body>
     <!--header-->
     <header>
+      <div class="musicOn">
+        <audio
+          id="audio"
+          style="display: none"
+          src="music/sosage_dog.mp3"
+          controls
+          autostart="0"
+          loop
+        ></audio>
+      </div>
+
       <div class="outerbox">
         <div class="header">
           <div class="logo">
@@ -78,6 +89,31 @@
             <button class="wallet-btn btn" id="connectWallet">
               <span>Connect Wallet</span>
             </button>
+            <div>
+              <input
+                type="checkbox"
+                name="un-mute"
+                id="un-mute"
+                value="PLAY"
+                onclick="play()"
+              /><label for="un-mute" class="unmute">
+                <img src="images/mute1.png" alt="Mute" title="Mute icon" />
+              </label>
+              <label for="un-mute" class="mute">
+                <img src="images/mute.png" alt="Unmute" title="Unmute icon" />
+              </label>
+            </div>
+            <script>
+              function play() {
+                var audio = document.getElementById("audio");
+                audio.paused ? audio.play() : music_stop();
+              }
+              audio.volume = 0.1;
+              function music_stop() {
+                audio.pause();
+                audio.currentTime = 0;
+              }
+            </script>
           </div>
         </div>
       </div>
