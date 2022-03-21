@@ -63,6 +63,7 @@
           </div>
           <div class="menu">
             <a
+              class="circlein"
               href="https://discord.gg/QmFW9mF8Xf"
               target="_blank"
               rel="noopener noreferrer"
@@ -96,18 +97,31 @@
             <button class="wallet-btn btn" id="connectWallet">
               <span>Connect Wallet</span>
             </button>
-            <div>
-              <input
-                type="checkbox"
-                name="un-mute"
-                id="un-mute"
-                onclick="play()"
-              /><label for="un-mute" class="unmute" value="1">
-                <img src="images/mute1.png" alt="Mute" title="Mute icon" />
-              </label>
-              <label for="un-mute" class="mute" value="2">
-                <img src="images/mute.png" alt="Unmute" title="Unmute icon" />
-              </label>
+            <div class="circle">
+              <div class="circlein">
+                <input
+                  type="checkbox"
+                  name="un-mute"
+                  id="un-mute"
+                  onclick="play()"
+                  style="cursor: pointer"
+                /><label
+                  for="un-mute"
+                  class="unmute"
+                  value="1"
+                  style="cursor: pointer"
+                >
+                  <img src="images/mute1.png" alt="Mute" />
+                </label>
+                <label
+                  for="un-mute"
+                  class="mute"
+                  value="2"
+                  style="cursor: pointer"
+                >
+                  <img src="images/mute.png" alt="Unmute" />
+                </label>
+              </div>
             </div>
             <script>
               var audio = document.getElementById("audio");

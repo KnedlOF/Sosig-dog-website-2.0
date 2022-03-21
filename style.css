@@ -299,8 +299,13 @@ body {
 }
 /*mute*/
 input {
-  vertical-align: middle;
   position: relative;
+  display: block;
+}
+.circlein {
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 input#un-mute {
   display: none;
@@ -316,6 +321,13 @@ input#un-mute:checked ~ .mute img {
 
 input#un-mute:checked ~ .unmute img {
   display: none;
+}
+
+.circle:hover {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background-color: #5873b375;
 }
 
 /*DEVICE SUPPORT*/
