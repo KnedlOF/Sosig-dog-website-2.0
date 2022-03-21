@@ -40,7 +40,14 @@
         <audio
           id="audio"
           style="display: none"
-          src="music/sosage_dog.mp3"
+          src="music/sosig start.mp3"
+          controls
+          autostart="0"
+        ></audio>
+        <audio
+          id="audioloop"
+          style="display: none"
+          src="music/sosig loop.mp3"
           controls
           autostart="0"
           loop
@@ -94,24 +101,36 @@
                 type="checkbox"
                 name="un-mute"
                 id="un-mute"
-                value="PLAY"
                 onclick="play()"
-              /><label for="un-mute" class="unmute">
+              /><label for="un-mute" class="unmute" value="1">
                 <img src="images/mute1.png" alt="Mute" title="Mute icon" />
               </label>
-              <label for="un-mute" class="mute">
+              <label for="un-mute" class="mute" value="2">
                 <img src="images/mute.png" alt="Unmute" title="Unmute icon" />
               </label>
             </div>
             <script>
+              var audio = document.getElementById("audio");
+              var audioloop = document.getElementById("audioloop");
+              var x = 1;
+              var y = 1;
               function play() {
-                var audio = document.getElementById("audio");
-                audio.paused ? audio.play() : music_stop();
-              }
-              audio.volume = 0.1;
-              function music_stop() {
-                audio.pause();
-                audio.currentTime = 0;
+                x++;
+                y = x % 2;
+
+                if (y == 0) {
+                  audio.volume = 0.1;
+                  audioloop.volume = 0.1;
+                  audio.play();
+                  audio.addEventListener("ended", function () {
+                    audioloop.play();
+                  });
+                } else {
+                  audio.pause();
+                  audioloop.pause();
+                  audio.currentTime = 0;
+                  audioloop.currentTime = 0;
+                }
               }
             </script>
           </div>
