@@ -33,6 +33,8 @@ body {
   -o-background-size: cover;
   background-size: cover;
   display: flex;
+  display: -webkit-flex;
+
   flex-flow: column;
   height: 110%;
 }
@@ -66,12 +68,14 @@ body:before {
   position: fixed;
   width: 100%;
   display: flex;
+  display: -webkit-flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .menu {
   display: flex;
+  display: -webkit-flex;
   gap: 2rem;
   align-items: center;
 }
@@ -225,6 +229,7 @@ body:before {
 #title {
   height: 200px;
   display: flex;
+  display: -webkit-flex;
   align-items: center;
   justify-content: center;
   max-width: 100%;
