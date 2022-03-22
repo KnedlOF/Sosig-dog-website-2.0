@@ -179,6 +179,8 @@ body:before {
 }
 #mintnotlive {
   width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 #mintnotlivetext {
   font-size: 30px;
