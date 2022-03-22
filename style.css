@@ -47,7 +47,7 @@ body {
 .header {
   max-width: 1600px;
   margin: 0 auto;
-  padding: 0.5rem 2rem;
+  padding: 0.7rem 2rem;
   position: fixed;
   width: 100%;
   display: flex;
@@ -69,7 +69,7 @@ body {
   -o-background-size: cover;
   background-size: cover;
   flex-flow: column;
-  height: 5000px;
+  width: 100%;
 }
 
 /*network alert*/
@@ -78,7 +78,7 @@ body {
   position: fixed;
   background-color: #cc0923e5;
   width: 100%;
-  height: 35px;
+  height: fit-content;
   margin: auto;
   text-align: center;
   padding: 8px;
@@ -91,13 +91,15 @@ body {
   border-bottom: 3px solid #b8ccf8;
   border-right: 3px solid #b8ccf8;
   border-left: 3px solid #b8ccf8;
-  margin-left: 70%;
-  width: 300px;
+  right: 5%;
+  min-width: 250px;
+  width: auto;
   position: fixed;
-  background-color: #5873b3c4;
+  background-color: #5873b3;
   height: 35px;
   text-align: center;
-  padding: 8px;
+  padding: 3px 60px 3px 60px;
+
   color: var(--font-color);
   font-family: var(--font-secondary);
   font-weight: 600;
@@ -140,10 +142,10 @@ body {
   border-color: transparent;
 }
 .mint-container {
-  padding-top: 15rem;
-  height: 600px;
+  margin-top: 20%;
   color: #ffffff;
   text-align: center;
+  margin-bottom: 20%;
 }
 #mintcontainer {
   display: block;
@@ -166,8 +168,9 @@ body {
 }
 
 #discordbutton {
+  display: block;
   margin-top: 3%;
-  margin-left: 35%;
+  margin-left: auto;
   margin-right: auto;
 }
 .mint-btn {
@@ -225,11 +228,12 @@ body {
   border: 8px solid #b8ccf8;
   background-color: var(--btn-bg-color);
   box-shadow: 3px 3px 5px #000;
-  margin-top: 1rem;
+  margin-top: 0;
   margin-right: 35%;
   margin-left: 5%;
   min-width: 500px;
   text-align: center;
+  width: auto;
 }
 .title1 {
   font-size: 45px;
@@ -282,7 +286,7 @@ body {
 .wholediv {
   margin-top: 0;
   width: 100%;
-  height: 21%;
+  height: fit-content;
   background-color: #5874b3;
   text-align: center;
 }
@@ -308,11 +312,13 @@ body {
   font-size: 60px;
 }
 #contact {
+  margin-top: 100px;
   font-family: var(--font-footer);
   color: #ffffff;
   font-size: 15px;
 
   font-weight: 500;
+  padding-bottom: 10px;
 }
 #contract:hover,
 :visited,
@@ -356,20 +362,104 @@ input#un-mute:checked ~ .unmute img {
 }
 
 /*DEVICE SUPPORT*/
+
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
+  .box {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    min-width: 200px;
+  }
+  #aboutheidi {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .btn {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .wallet-btn {
+    margin-left: 0rem;
+  }
+  .menu {
+    gap: 1rem;
+  }
+  .classic {
+    font-size: 15px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .title1 {
+    font-size: 25px;
+  }
+  .smaller {
+    width: 20px;
+  }
+  #aboutknedl {
+    width: 300px;
+  }
+  #NotLive {
+    width: 100%;
+  }
+  #mintnotlivetext {
+    font-size: 20px;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 650px) {
+  .box {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+  #aboutheidi {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  #NotLive {
+    width: 100%;
+    width: fit-content;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  .box {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+  #aboutheidi {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+  .box {
+    border-radius: 25px;
+    border: 8px solid #b8ccf8;
+    background-color: var(--btn-bg-color);
+    box-shadow: 3px 3px 5px #000;
+    margin-top: 1rem;
+    margin-right: 35%;
+    margin-left: 5%;
+    min-width: 500px;
+    text-align: center;
+    width: auto;
+  }
+  #aboutheidi {
+    margin-left: 35%;
+    margin-right: 5%;
+    margin-top: 15%;
+    width: content;
+    height: auto;
+    overflow: auto;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
