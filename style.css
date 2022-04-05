@@ -300,6 +300,7 @@ body:before {
   margin-right: auto;
   margin-top: 15%;
   height: 700px;
+  max-width: 1200px;
   width: 100%;
   background: transparent;
   border: 5px solid rgb(8, 10, 48);
