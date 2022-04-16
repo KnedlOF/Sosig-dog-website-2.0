@@ -262,17 +262,28 @@
       <div class="wholediv">
         <h class="title1" id="knedltitle">Creator</h>
         <div class="member">
-          <img src="images/Knedl.png" id="knedl" alt="Knedl" />
-          <h1 class="title2">KNEDL</h1>
-          <p class="classic" id="aboutknedl">
-            17 year old electronic student from Slovenia with a passion to use
-            blockchain technology to share artwork and promote a good cause.
-          </p>
-          <p id="contact">
-            © 2022 Created by Knedl. Contact email:
-            <a href="mailto:contact@sosigdog.com">contact@sosigdog.com</a>
-          </p>
+          <div id="member1">
+            <img src="images/Knedl.png" class="avatar" alt="Knedl" />
+            <h1 class="title2">KNEDL</h1>
+            <p class="classicmember" id="aboutknedl">
+              17 year old electronic student from Slovenia with a passion to use
+              blockchain technology to share artwork and promote a good cause.
+            </p>
+          </div>
+          <div id="member2">
+            <img src="images/trader logo.png" class="avatar" alt="Knedl" />
+            <h1 class="title2">TRADER2</h1>
+            <p class="classic" id="abouttrader">
+              Law student, from Scotland. Passionated about cryptocurrencies.
+              Helps with marketing the project.
+            </p>
+            <br />
+          </div>
         </div>
+        <p id="contact">
+          © 2022 Created by Knedl. Contact email:
+          <a href="mailto:contact@sosigdog.com">contact@sosigdog.com</a>
+        </p>
       </div>
       <div id="resultSpace"></div>
 
@@ -284,10 +295,12 @@
         var account = null;
         var contract = null;
         const ADDRESS = "0x7948fd82b42b7289d284E72542C881FFCc72b331";
+        //const ADDRESS = "0x7A0d6842D7e6116E81E44FB2eac309F83EFea07D";
         const cost = 0.01;
         const wei_cost = cost * 10 ** 18;
         let MintNumber = 1;
         const onboardButton = document.getElementById("connectWallet");
+        presaleaccounts = ["0xA2BA4B4078df5423e6a28F5675e9B373e4B949E6"];
 
         function HideMint() {
           var div1 = document.getElementById("mint-container");
