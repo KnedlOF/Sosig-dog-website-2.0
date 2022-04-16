@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
 
 /* GLOBAL STYLES */
 
@@ -325,17 +326,23 @@ body:before {
   display: inline-block;
 }
 .avatar {
-  margin-top: 50px;
   margin-bottom: auto;
   width: 230px;
   border-radius: 50%;
   border: #66d6d4 solid 10px;
 }
 .title2 {
-  font-size: 30px;
+  font-size: 20px;
+  color: #d5dde7;
+  font-family: "Inter", sans-serif;
+}
+.title3 {
+  font-size: 35px;
   color: var(--font-color);
   font-family: var(--font-title);
   font-weight: 10;
+  margin-top: 50px;
+  margin-bottom: 10px;
 }
 #aboutknedl {
   margin-left: auto;
@@ -449,9 +456,19 @@ input#un-mute:checked ~ .unmute img {
   }
   #member1 {
     margin-right: 0;
+    float: none;
   }
   #member2 {
     margin-left: 0;
+    float: none;
+  }
+  #abouttrader {
+    max-width: 300px;
+    font-size: 20px;
+  }
+  #aboutknedl {
+    max-width: 300px;
+    font-size: 20px;
   }
 }
 
@@ -472,9 +489,17 @@ input#un-mute:checked ~ .unmute img {
   }
   #member1 {
     margin-right: 0;
+    float: none;
   }
   #member2 {
     margin-left: 0;
+    float: none;
+  }
+  #abouttrader {
+    max-width: none;
+  }
+  #aboutknedl {
+    max-width: none;
   }
 }
 
@@ -491,9 +516,17 @@ input#un-mute:checked ~ .unmute img {
   }
   #member1 {
     margin-right: 0;
+    float: none;
   }
   #member2 {
     margin-left: 0;
+    float: none;
+  }
+  #abouttrader {
+    max-width: none;
+  }
+  #aboutknedl {
+    max-width: none;
   }
 }
 
@@ -524,6 +557,12 @@ input#un-mute:checked ~ .unmute img {
   }
   #member2 {
     margin-left: 50px;
+  }
+  #abouttrader {
+    max-width: none;
+  }
+  #aboutknedl {
+    max-width: none;
   }
 }
 
