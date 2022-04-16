@@ -313,8 +313,20 @@ body:before {
   background-color: #5874b3;
   text-align: center;
 }
-#knedl {
+.member {
+  overflow: hidden;
+}
+#member1 {
+  margin-right: 50px;
+  display: inline-block;
+}
+#member2 {
+  margin-left: 50px;
+  display: inline-block;
+}
+.avatar {
   margin-top: 50px;
+  margin-bottom: auto;
   width: 230px;
   border-radius: 50%;
   border: #66d6d4 solid 10px;
@@ -326,6 +338,12 @@ body:before {
   font-weight: 10;
 }
 #aboutknedl {
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  text-align: center;
+}
+#abouttrader {
   margin-left: auto;
   margin-right: auto;
   width: 400px;
@@ -429,6 +447,12 @@ input#un-mute:checked ~ .unmute img {
   #mintnotlivetext {
     font-size: 20px;
   }
+  #member1 {
+    margin-right: 0;
+  }
+  #member2 {
+    margin-left: 0;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -446,6 +470,12 @@ input#un-mute:checked ~ .unmute img {
     width: 100%;
     width: fit-content;
   }
+  #member1 {
+    margin-right: 0;
+  }
+  #member2 {
+    margin-left: 0;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -458,6 +488,12 @@ input#un-mute:checked ~ .unmute img {
   #aboutheidi {
     margin-left: 0;
     margin-right: 0;
+  }
+  #member1 {
+    margin-right: 0;
+  }
+  #member2 {
+    margin-left: 0;
   }
 }
 
@@ -482,6 +518,12 @@ input#un-mute:checked ~ .unmute img {
     width: content;
     height: auto;
     overflow: auto;
+  }
+  #member1 {
+    margin-right: 50px;
+  }
+  #member2 {
+    margin-left: 50px;
   }
 }
 
