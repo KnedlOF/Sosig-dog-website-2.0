@@ -16,7 +16,7 @@ html {
   --font-footer: "Varela Round", sans-serif;
   --bg-color: #00163f;
   --font-color: #ffffff;
-  --btn-bg-color: #66d6d4;
+  --btn-bg-color: #74b4da;
   --accent-color: rgb(46, 4, 59);
   --header-shadow: #000 0px 0px 5px;
 }
@@ -162,24 +162,36 @@ body:before {
   border-color: transparent;
 }
 .mint-container {
-  margin-top: 20%;
+  border-radius: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  background-color: rgb(46, 72, 129);
+  margin-top: 10%;
   color: #ffffff;
   text-align: center;
   margin-bottom: 20%;
+  padding: 2rem 2rem;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.603);
 }
-#mintcontainer {
-  display: block;
+#youwhitelisted {
+  margin-left: 3%;
+  margin-top: 10%;
+  text-align: center;
+  margin-bottom: 25px;
 }
+
 #NotLive {
   margin-left: auto;
   margin-right: auto;
   width: fit-content;
   margin-top: 15%;
   margin-bottom: 180px;
-  display: none;
+  display: block;
 }
 #mintnotlive {
   width: 100%;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -203,6 +215,7 @@ body:before {
   margin-top: 0.7rem;
   padding: 0.25rem 1.8rem;
 }
+
 .number-btn {
   border-radius: 2rem;
   border-color: transparent;
@@ -228,7 +241,11 @@ body:before {
   margin-bottom: 1rem;
   margin-left: 1rem;
 }
-
+#pricetext {
+  margin-top: 3%;
+  margin-left: 3%;
+  font-size: 15px;
+}
 #title {
   height: 200px;
   display: flex;
@@ -247,10 +264,10 @@ body:before {
 }
 
 .box {
-  border-radius: 25px;
-  border: 8px solid #b8ccf8;
+  border-radius: 15px;
+  padding: 0.1rem;
   background-color: var(--btn-bg-color);
-  box-shadow: 3px 3px 5px #000;
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.603);
   margin-top: 0;
   margin-right: 35%;
   margin-left: 5%;
@@ -260,6 +277,7 @@ body:before {
 }
 .title1 {
   font-size: 45px;
+  text-shadow: 2px 2px #00163f;
   color: var(--font-color);
   font-family: var(--font-title);
   font-weight: 10;
@@ -268,6 +286,7 @@ body:before {
 .classic {
   font-size: 25px;
   color: var(--font-color);
+  text-shadow: 1px 1px #00163f;
   font-family: var(--font-secondary);
   font-weight: 600;
   margin-top: 3%;
@@ -289,6 +308,19 @@ body:before {
   max-width: 300px;
   border-radius: 15px;
   float: left;
+}
+#healthUK {
+  width: 30%;
+  max-width: 350px;
+  border-radius: 15px;
+  float: left;
+}
+#UKbut {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #429dd1;
+  margin-bottom: 10px;
+  box-shadow: 2px 2px 3px #000;
 }
 #heiditext {
   margin-left: 35%;
@@ -359,7 +391,16 @@ body:before {
 #knedltitle {
   font-size: 60px;
 }
-#contact {
+.notes {
+  margin-top: 50px;
+  font-family: var(--font-footer);
+  color: #ffffff;
+  font-size: 13px;
+
+  font-weight: 500;
+  padding-bottom: 7px;
+}
+.contact {
   margin-top: 100px;
   font-family: var(--font-footer);
   color: #ffffff;
@@ -423,13 +464,10 @@ input#un-mute:checked ~ .unmute img {
     margin-left: 0;
     margin-right: 0;
   }
-  .btn {
-    padding: 0.2rem 0.5rem;
-    font-size: 0.9rem;
-  }
-
   .wallet-btn {
+    padding: 0.2rem 0.5rem;
     margin-left: 0rem;
+    font-size: 0.9rem;
   }
   .menu {
     gap: 1rem;
@@ -469,6 +507,12 @@ input#un-mute:checked ~ .unmute img {
   #aboutknedl {
     max-width: 300px;
     font-size: 20px;
+  }
+  .notes {
+    font-size: 10px;
+  }
+  .mint-container {
+    margin-top: 0;
   }
 }
 
@@ -533,10 +577,10 @@ input#un-mute:checked ~ .unmute img {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .box {
-    border-radius: 25px;
-    border: 8px solid #b8ccf8;
+    border-radius: 15px;
+    padding: 0.1rem;
     background-color: var(--btn-bg-color);
-    box-shadow: 3px 3px 5px #000;
+    box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.603);
     margin-top: 1rem;
     margin-right: 35%;
     margin-left: 5%;
