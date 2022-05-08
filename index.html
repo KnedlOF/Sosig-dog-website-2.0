@@ -214,8 +214,7 @@
       <div id="NotLive">
         <div class="box" id="mintnotlive">
           <p class="classic" id="mintnotlivetext">
-            Pre-sale has started, join Discord, if you aren't whitelisted yet.
-            Price is 30% off.
+            Pre-sale has ended. Join discord for more info about project.
           </p>
           <!-- <p class="classic" style="font-weight: bolder; font-size: 40px">
             GIVEAWAY ON TWITTER
@@ -380,7 +379,7 @@
           div2.style.display = "block";
         }
         //mint not live
-        // HideMint();
+        HideMint();
 
         async function MintAllow() {
           document.getElementById("connectWallet").onclick = async () => {
@@ -417,13 +416,13 @@
 
               if (
                 (currentSupply < totalSupply) &
-                (paused == false) &
-                Whitelisted
+                (paused == false)
+                // & Whitelisted
               ) {
-                var div1 = document.getElementById("mint-container");
-                div1.style.display = "block";
-                var div2 = document.getElementById("NotLive");
-                div2.style.display = "none";
+                // var div1 = document.getElementById("mint-container");
+                // div1.style.display = "block";
+                // var div2 = document.getElementById("NotLive");
+                // div2.style.display = "none";
                 document.getElementById("mintAdd").onclick = async () => {
                   if (
                     MintNumber < MaxMint &&
