@@ -189,7 +189,7 @@
         <object data="images/sosig title white.png" id="titlepicture"></object>
       </div>
       <div class="mint-container" id="mint-container" style="display: none">
-        <p class="title2" id="youwhitelisted">You are whitelisted!</p>
+        <p class="title2" id="youwhitelisted">You can now mint!</p>
         <p class="supply">
           <span id="currentSupply">?</span>
           /
@@ -199,7 +199,7 @@
         <span id="MintNumber">1</span>
         <button id="mintAdd" class="number-btn btn">+</button>
         <p class="title2" id="pricetext">
-          <span id="price">7</span>
+          <span id="price">10</span>
           MATIC + Gas fee
         </p>
         <div><button id="mintBut" class="mint-btn btn">Mint</button></div>
@@ -213,9 +213,7 @@
       </div>
       <div id="NotLive">
         <div class="box" id="mintnotlive">
-          <p class="classic" id="mintnotlivetext">
-            Pre-sale has ended. Join discord for more info about project.
-          </p>
+          <p class="classic" id="mintnotlivetext">To mint, connect wallet.</p>
           <!-- <p class="classic" style="font-weight: bolder; font-size: 40px">
             GIVEAWAY ON TWITTER
           </p> -->
@@ -366,10 +364,10 @@
         var contract = null;
         const ADDRESS = "0x7948fd82b42b7289d284E72542C881FFCc72b331";
         // const ADDRESS = "0x7A0d6842D7e6116E81E44FB2eac309F83EFea07D";
-        const cost = 7;
+        const cost = 10;
         const wei_cost = cost * 10 ** 18;
         let MintNumber = 1;
-        let price = 7;
+        let price = 10;
         const onboardButton = document.getElementById("connectWallet");
 
         function HideMint() {
@@ -379,7 +377,7 @@
           div2.style.display = "block";
         }
         //mint not live
-        HideMint();
+        //HideMint();
 
         async function MintAllow() {
           document.getElementById("connectWallet").onclick = async () => {
@@ -419,17 +417,17 @@
                 (paused == false)
                 // & Whitelisted
               ) {
-                // var div1 = document.getElementById("mint-container");
-                // div1.style.display = "block";
-                // var div2 = document.getElementById("NotLive");
-                // div2.style.display = "none";
+                var div1 = document.getElementById("mint-container");
+                div1.style.display = "block";
+                var div2 = document.getElementById("NotLive");
+                div2.style.display = "none";
                 document.getElementById("mintAdd").onclick = async () => {
                   if (
                     MintNumber < MaxMint &&
                     MintNumber < totalSupply - currentSupply
                   ) {
                     MintNumber++;
-                    price += 7;
+                    price += 10;
                   }
                   document.getElementById("MintNumber").textContent =
                     MintNumber;
@@ -438,7 +436,7 @@
                 document.getElementById("mintReduce").onclick = async () => {
                   if (MintNumber > 1) {
                     MintNumber--;
-                    price -= 7;
+                    price -= 10;
                   }
                   document.getElementById("MintNumber").textContent =
                     MintNumber;
