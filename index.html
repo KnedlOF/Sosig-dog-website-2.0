@@ -422,9 +422,9 @@
               // Contract methods
 
               const currentSupply = await contract.methods.totalSupply().call();
-              console.log(currentSupply);
+
               const totalSupply = await contract.methods.maxSupply().call();
-              console.log(totalSupply);
+
               const MaxMint = await contract.methods.maxMintAmount().call();
 
               const paused = await contract.methods.paused().call();
