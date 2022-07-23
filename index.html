@@ -431,7 +431,7 @@
 
               const balance = await contract.methods.balanceOf(account).call();
               console.log(balance);
-
+              console.log(currentSupply);
               const Whitelisted = await contract.methods
                 .presaleWallets(account)
                 .call();
@@ -440,7 +440,7 @@
               //Mint number
 
               if (
-                (currentSupply < totalSupply) &
+                (totalSupply < currentSupply) &
                 (paused == false) &
                 (balance <= 2)
                 // & Whitelisted
@@ -491,13 +491,13 @@
                 };
               }
               //Sold out
-              else if (currentSupply >= totalSupply) {
+              else if (currentSupply <= totalSupply) {
                 alert("Sold out");
               }
               //if mint is not live
               else if (paused == true) {
                 HideMint();
-              } else if (balance > 2) {
+              } else if (balance >= 2) {
                 var smth2 = document.getElementById("Live");
                 smth2.style.display = "block";
                 var smth1 = document.getElementById("NotLive");
