@@ -495,7 +495,7 @@
                 alert("Sold out");
               }
               //if mint is not live
-              else if (paused == true || !Whitelisted) {
+              else if (paused == true) {
                 HideMint();
               } else if (balance > 2) {
                 var smth2 = document.getElementById("Live");
