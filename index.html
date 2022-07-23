@@ -199,7 +199,7 @@
         <span id="MintNumber">1</span>
         <button id="mintAdd" class="number-btn btn">+</button>
         <p class="title2" id="pricetext">
-          <span id="price">10</span>
+          <span id="price">0</span>
           MATIC + Gas fee
         </p>
         <div><button id="mintBut" class="mint-btn btn">Mint</button></div>
@@ -213,17 +213,39 @@
       </div>
       <div id="NotLive">
         <div class="box" id="mintnotlive">
-          <p class="classic" id="mintnotlivetext">To mint, connect wallet.</p>
+          <p class="classic" id="mintnotlivetext">
+            Free mint now awailable. To mint, connect wallet. You can maximumly
+            mint 2 NFTs. One per transaction.
+          </p>
           <!-- <p class="classic" style="font-weight: bolder; font-size: 40px">
             GIVEAWAY ON TWITTER
           </p> -->
         </div>
+
         <a
           href="https://discord.gg/QmFW9mF8Xf"
           target="_blank"
           rel="noopener noreferrer"
         >
           <button class="wallet-btn btn" id="discordbutton">
+            <img
+              src="images/header/discord.webp"
+              style="position: relative"
+            /></button
+        ></a>
+      </div>
+      <div id="Live" style="display: none">
+        <div class="box" id="mintlive">
+          <p class="classic" id="mintlivetext">
+            You already have 2 or more NFTs, you can not mint anymore.
+          </p>
+        </div>
+        <a
+          href="https://discord.gg/QmFW9mF8Xf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button class="wallet-btn btn" id="discordbutton2">
             <img
               src="images/header/discord.webp"
               style="position: relative"
@@ -364,10 +386,10 @@
         var contract = null;
         const ADDRESS = "0x7948fd82b42b7289d284E72542C881FFCc72b331";
         // const ADDRESS = "0x7A0d6842D7e6116E81E44FB2eac309F83EFea07D";
-        const cost = 10;
-        const wei_cost = cost * 10 ** 18;
+        const cost = 0;
+        const wei_cost = cost * 0 ** 18;
         let MintNumber = 1;
-        let price = 10;
+        let price = 0;
         const onboardButton = document.getElementById("connectWallet");
 
         function HideMint() {
@@ -375,6 +397,8 @@
           div1.style.display = "none";
           var div2 = document.getElementById("NotLive");
           div2.style.display = "block";
+          var div3 = document.getElementById("Live");
+          div2.style.display = "none";
         }
         //mint not live
         //HideMint();
@@ -405,6 +429,9 @@
 
               const paused = await contract.methods.paused().call();
 
+              const balance = await contract.methods.balanceOf(account).call();
+              console.log(balance);
+
               const Whitelisted = await contract.methods
                 .presaleWallets(account)
                 .call();
@@ -414,20 +441,23 @@
 
               if (
                 (currentSupply < totalSupply) &
-                (paused == false)
+                (paused == false) &
+                (balance <= 2)
                 // & Whitelisted
               ) {
                 var div1 = document.getElementById("mint-container");
                 div1.style.display = "block";
                 var div2 = document.getElementById("NotLive");
                 div2.style.display = "none";
+                var div3 = document.getElementById("Live");
+                div3.style.display = "none";
                 document.getElementById("mintAdd").onclick = async () => {
                   if (
                     MintNumber < MaxMint &&
                     MintNumber < totalSupply - currentSupply
                   ) {
                     MintNumber++;
-                    price += 10;
+                    price += 0;
                   }
                   document.getElementById("MintNumber").textContent =
                     MintNumber;
@@ -436,7 +466,7 @@
                 document.getElementById("mintReduce").onclick = async () => {
                   if (MintNumber > 1) {
                     MintNumber--;
-                    price -= 10;
+                    price -= 0;
                   }
                   document.getElementById("MintNumber").textContent =
                     MintNumber;
@@ -467,6 +497,13 @@
               //if mint is not live
               else if (paused == true || !Whitelisted) {
                 HideMint();
+              } else if (balance > 2) {
+                var smth2 = document.getElementById("Live");
+                smth2.style.display = "block";
+                var smth1 = document.getElementById("NotLive");
+                smth1.style.display = "none";
+                var div1 = document.getElementById("mint-container");
+                div1.style.display = "none";
               }
               await sleep(2000);
             }

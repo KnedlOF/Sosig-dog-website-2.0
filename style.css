@@ -189,6 +189,14 @@ body:before {
   margin-bottom: 180px;
   display: block;
 }
+#Live {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  margin-top: 15%;
+  margin-bottom: 180px;
+  display: block;
+}
 #mintnotlive {
   width: 100%;
   max-width: 1000px;
@@ -200,8 +208,25 @@ body:before {
   margin-left: 3%;
   margin-right: 3%;
 }
+#mintlive {
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#mintlivetext {
+  font-size: 30px;
+  margin-left: 3%;
+  margin-right: 3%;
+}
 
 #discordbutton {
+  display: block;
+  margin-top: 3%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#discordbutton2 {
   display: block;
   margin-top: 3%;
   margin-left: auto;
