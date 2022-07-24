@@ -214,8 +214,9 @@
       <div id="NotLive">
         <div class="box" id="mintnotlive">
           <p class="classic" id="mintnotlivetext">
-            Free mint now awailable. To mint, connect wallet. You can maximumly
-            mint 2 NFTs. One per transaction.
+            Free mint now awailable. To mint, join Discord and send your wallet
+            address in #get-whitelisted. You can maximumly mint 2 NFTs. One per
+            transaction.
           </p>
           <!-- <p class="classic" style="font-weight: bolder; font-size: 40px">
             GIVEAWAY ON TWITTER
@@ -440,10 +441,10 @@
               //Mint number
 
               if (
-                (totalSupply < currentSupply) &
+                (totalSupply > currentSupply) &
                 (paused == false) &
-                (balance <= 2)
-                // & Whitelisted
+                (balance <= 2) &
+                Whitelisted
               ) {
                 var div1 = document.getElementById("mint-container");
                 div1.style.display = "block";
@@ -491,8 +492,20 @@
                 };
               }
               //Sold out
-              else if (currentSupply <= totalSupply) {
+              else if (currentSupply >= totalSupply) {
                 alert("Sold out");
+              } else if (!Whitelisted) {
+                var smth2 = document.getElementById("Live");
+                smth2.style.display = "block";
+                var smth1 = document.getElementById("NotLive");
+                smth1.style.display = "none";
+                var div1 = document.getElementById("mint-container");
+                div1.style.display = "none";
+
+                var mintlivetextElement =
+                  document.getElementById("mintlivetext");
+                mintlivetextElement.innerHTML =
+                  "You are not whitelisted, join Discord to get it!";
               }
               //if mint is not live
               else if (paused == true) {
@@ -504,6 +517,10 @@
                 smth1.style.display = "none";
                 var div1 = document.getElementById("mint-container");
                 div1.style.display = "none";
+                var mintlivetextElement =
+                  document.getElementById("mintlivetext");
+                mintlivetextElement.innerHTML =
+                  "You already have 2 or more NFTs, you can not mint anymore.";
               }
               await sleep(2000);
             }
